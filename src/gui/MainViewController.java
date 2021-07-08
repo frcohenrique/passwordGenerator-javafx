@@ -3,6 +3,7 @@ package gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import gui.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -24,8 +25,12 @@ public class MainViewController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		
-		
+		initializeConstraints();
+	}
+	
+	private void initializeConstraints() {
+		Constraints.setTextFieldInteger(txtPassLenght);
+		Constraints.setTextFieldMax(txtPassLenght, 2);
 	}
 	
 }
