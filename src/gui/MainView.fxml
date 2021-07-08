@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="211.0" prefWidth="423.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2">
+<AnchorPane prefHeight="211.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <children>
       <Label layoutX="78.0" layoutY="14.0" text="PASSWORD GENERATOR">
          <font>
@@ -19,13 +18,13 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="189.0" layoutY="74.0" promptText="number from 8 to 26">
+      <TextField fx:id="txtPassLenght" layoutX="189.0" layoutY="74.0" promptText="number from 8 to 26">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="179.0" layoutY="123.0" mnemonicParsing="false" text="Generate" />
-      <Label layoutX="181.0" layoutY="170.0" text="Pass label">
+      <Button fx:id="btGenerate" layoutX="179.0" layoutY="123.0" mnemonicParsing="false" onAction="#onBtGenerateAction" text="Generate" />
+      <Label fx:id="labelPassword" layoutX="181.0" layoutY="170.0">
          <font>
             <Font size="14.0" />
          </font>
